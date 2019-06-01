@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>Potattoo</title>
+        <link rel="stylesheet" href="./bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <div class="tooltips text-danger">
+                <span class="tool" id="menu-icon">MENU</span>
+                <p></p>
+                <span class="tool" id="order-icon">ORDER</span>
+                <p></p>
+                <span class="tool" id="reach-icon">REACH</span>
+        </div>
+
+        <nav>
+            <button class="box"></button>
+            <div class="line"></div>
+            <button class="box"></button>
+            <div class="line"></div>
+            <button class="box"></button>
+        </nav>
+        <!--<embed src="song.mp3" width="180" height="90" loop="false" autostart="false" hidden="true" />-->
+        <div id="fixed-bar" class="mt-4">
+            <a href="#fixed-bar">
+                <h4> <span class="text-danger">🍟</span> Zotato</h4>
+            </a>
+        </div>
+
+        <br><br><br><br>
+
+        <div class="slideshow">
+            <img class="slide" src="./sprite/potato1.jpg">
+            <img class="slide" src="./sprite/potato2.jpg">
+            <img class="slide" src="./sprite/potato3.jpg">
+            <img class="slide" src="./sprite/potato4.jpg">
+
+            <div id="not-slide" class="mt-5">
+                    <h1>The Potato Paradise</h1>
+                    <blockquote class="blockquote">
+                        <p class="mb-0">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel vitae eos deserunt, eligendi voluptate nostrum!
+                        </p>       
+                    </blockquote>
+            </div>   
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            carousel();
+
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("slide");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"; 
+            }
+            slideIndex++;
+            if (slideIndex > x.length) {slideIndex = 1} 
+            x[slideIndex-1].style.display = "block"; 
+            setTimeout(carousel, 2500); // Change image every 3 seconds
+            }
+        </script>
+    </body>
+</html>
